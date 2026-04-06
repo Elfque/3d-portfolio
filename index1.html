@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Web Developer Portfolio</title>
+  </head>
+  <body
+    class="bg-brand-dark text-white font-lexend antialiased selection:bg-brand-green selection:text-white"
+  >
+    <canvas class="renderer"></canvas>
+
+    <div class="content-layer">
+      <!-- Navbar -->
+      <nav
+        class="fixed top-0 w-full p-6 flex justify-between items-center z-50 backdrop-blur-md bg-brand-dark/30 border-b border-white/10 transition-all duration-300"
+      >
+        <div
+          class="text-2xl font-bold tracking-tighter hover:text-brand-green transition-colors cursor-pointer"
+        >
+          dev.portfolio
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#home" class="hover:text-brand-green transition-colors"
+            >Home</a
+          >
+          <a href="#about" class="hover:text-brand-green transition-colors"
+            >About</a
+          >
+          <a href="#skills" class="hover:text-brand-green transition-colors"
+            >Skills</a
+          >
+          <a href="#experience" class="hover:text-brand-green transition-colors"
+            >Experience</a
+          >
+          <a href="#projects" class="hover:text-brand-green transition-colors"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-brand-green transition-colors"
+            >Contact</a
+          >
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="min-h-[100vh] w-full flex items-center p-8 md:p-24 pb-0 mt-16 md:mt-0"
+      >
+        <div
+          class="max-w-3xl mr-auto w-full backdrop-blur-sm bg-black/20 border border-white/10 p-10 md:p-16 rounded-3xl shadow-2xl hover:bg-black/30 transition-all duration-500"
+        >
+          <p
+            class="text-brand-green font-semibold mb-4 tracking-widest uppercase text-sm"
+          >
+            Hello World, I am
+          </p>
+          <h1
+            class="text-5xl md:text-8xl font-black mb-6 leading-tight flex flex-col"
+          >
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400"
+              >Creative</span
+            >
+            <span class="text-white">Developer.</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-gray-400 max-w-2xl leading-relaxed mb-10"
+          >
+            Crafting immersive digital experiences by combining modern web
+            technologies with interactive 3D aesthetics.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              class="px-8 py-4 bg-brand-green text-brand-dark font-bold rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(20,160,113,0.3)]"
+              >View Work</a
+            >
+            <a
+              href="#contact"
+              class="px-8 py-4 bg-transparent border border-white/30 font-bold rounded-full hover:bg-white/10 transition-all"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="min-h-[100vh] w-full flex items-center p-8 md:p-24"
+      >
+        <div
+          class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center"
+        >
+          <!-- Left: Text -->
+          <div>
+            <p
+              class="text-brand-green font-semibold mb-4 tracking-widest uppercase text-sm"
+            >
+              Who I Am
+            </p>
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+              About <span class="text-brand-green">Me</span>
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6">
+              I'm a passionate full-stack web developer who loves creating
+              beautiful, performant, and user-friendly digital experiences. I
+              bridge the gap between design and code — from pixel-perfect UI to
+              bulletproof backend logic.
+            </p>
+            <p class="text-gray-400 text-lg leading-relaxed mb-10">
+              When I'm not building web apps, you'll find me experimenting with
+              3D graphics, exploring generative art, or contributing to
+              open-source projects. I believe great software is a perfect blend
+              of aesthetics and engineering.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="text-center p-6 bg-black/30 border border-white/10 rounded-2xl backdrop-blur-sm"
+              >
+                <div class="text-3xl font-black text-brand-green">3+</div>
+                <div class="text-sm text-gray-400 mt-1">Years Exp.</div>
+              </div>
+              <div
+                class="text-center p-6 bg-black/30 border border-white/10 rounded-2xl backdrop-blur-sm"
+              >
+                <div class="text-3xl font-black text-brand-green">50+</div>
+                <div class="text-sm text-gray-400 mt-1">Projects</div>
+              </div>
+              <div
+                class="text-center p-6 bg-black/30 border border-white/10 rounded-2xl backdrop-blur-sm"
+              >
+                <div class="text-3xl font-black text-brand-green">20+</div>
+                <div class="text-sm text-gray-400 mt-1">Clients</div>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Decorative card -->
+          <div class="relative flex justify-center">
+            <div
+              class="relative w-80 h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-brand-green/10 via-black to-purple-900/20 border border-white/10 shadow-2xl flex flex-col justify-end p-8 backdrop-blur-xl"
+            >
+              <div class="absolute top-8 left-8 right-8">
+                <div class="flex items-center gap-2 mb-6">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-brand-green"></div>
+                </div>
+                <div class="font-mono text-xs text-brand-green/70 space-y-1">
+                  <div>
+                    <span class="text-purple-400">const</span>
+                    <span class="text-white">dev</span> = {
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-yellow-300">name</span>:
+                    <span class="text-brand-green">'Alex Morgan'</span>,
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-yellow-300">role</span>:
+                    <span class="text-brand-green">'Full-Stack Dev'</span>,
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-yellow-300">passion</span>:
+                    <span class="text-brand-green">'3D + Web'</span>,
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-yellow-300">open</span>:
+                    <span class="text-blue-400">true</span>
+                  </div>
+                  <div>};</div>
+                </div>
+              </div>
+              <div class="text-xs text-gray-600 font-mono">
+                // always shipping ✓
+              </div>
+            </div>
+            <!-- Floating badge -->
+            <div
+              class="absolute -top-4 -right-4 bg-brand-green text-brand-dark font-black text-sm px-4 py-2 rounded-full shadow-lg animate-bounce"
+            >
+              Available for hire
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section
+        id="skills"
+        class="min-h-[100vh] w-full flex items-center p-8 md:p-24"
+      >
+        <div class="max-w-7xl ml-auto w-full">
+          <p
+            class="text-brand-green font-semibold mb-4 tracking-widest uppercase text-sm text-right"
+          >
+            What I Work With
+          </p>
+          <h2 class="text-4xl md:text-6xl font-bold mb-16 text-right">
+            Skills & <span class="text-brand-green">Stack</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Frontend -->
+            <div
+              class="group p-8 bg-black/30 border border-white/10 hover:border-brand-green/40 rounded-3xl backdrop-blur-xl transition-all duration-500 hover:bg-black/50"
+            >
+              <div
+                class="w-12 h-12 rounded-2xl bg-brand-green/10 border border-brand-green/20 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-6 h-6 text-brand-green"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold mb-4 group-hover:text-brand-green transition-colors"
+              >
+                Frontend
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">React / Next.js</span>
+                  <div class="flex gap-1">
+                    <!-- 5/5 --><span
+                      class="w-2 h-2 rounded-full bg-brand-green"
+                    ></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Tailwind CSS</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Three.js / WebGL</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">TypeScript</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-brand-green"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div
+              class="group p-8 bg-black/30 border border-white/10 hover:border-purple-500/40 rounded-3xl backdrop-blur-xl transition-all duration-500 hover:bg-black/50"
+            >
+              <div
+                class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold mb-4 group-hover:text-purple-400 transition-colors"
+              >
+                Backend
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Node.js / Express</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">PostgreSQL</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">GraphQL</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">REST APIs</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div
+              class="group p-8 bg-black/30 border border-white/10 hover:border-yellow-500/40 rounded-3xl backdrop-blur-xl transition-all duration-500 hover:bg-black/50"
+            >
+              <div
+                class="w-12 h-12 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-6 h-6 text-yellow-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold mb-4 group-hover:text-yellow-400 transition-colors"
+              >
+                Tools & DevOps
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Git / GitHub</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Docker</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">AWS / Vercel</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Figma / Design</span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-yellow-400"></span
+                    ><span class="w-2 h-2 rounded-full bg-white/20"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Icons Row -->
+          <div class="mt-12 flex flex-wrap gap-3 justify-end">
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >JavaScript</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >TypeScript</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >React</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >Vue.js</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >Node.js</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >Python</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >Three.js</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >GSAP</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >MongoDB</span
+            >
+            <span
+              class="px-5 py-2 bg-black/40 border border-white/10 rounded-full text-sm text-gray-300 font-medium backdrop-blur-sm hover:border-brand-green/30 hover:text-brand-green transition-all cursor-default"
+              >Prisma</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section
+        id="experience"
+        class="min-h-[100vh] w-full flex items-center p-8 md:p-24"
+      >
+        <div class="max-w-7xl mx-auto w-full">
+          <p
+            class="text-brand-green font-semibold mb-4 tracking-widest uppercase text-sm"
+          >
+            Career Path
+          </p>
+          <h2 class="text-4xl md:text-6xl font-bold mb-16">
+            Work <span class="text-brand-green">Experience</span>
+          </h2>
+
+          <div class="relative">
+            <!-- Timeline line -->
+            <div
+              class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand-green via-white/10 to-transparent hidden md:block"
+            ></div>
+
+            <div class="flex flex-col gap-10">
+              <!-- Job 1 -->
+              <div
+                class="relative md:grid md:grid-cols-2 md:gap-16 items-start"
+              >
+                <div class="md:text-right md:pr-16 mb-4 md:mb-0">
+                  <span
+                    class="text-xs font-bold text-brand-green tracking-widest uppercase bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-full"
+                    >2024 — Present</span
+                  >
+                </div>
+                <!-- Timeline dot -->
+                <div
+                  class="absolute left-0 md:left-1/2 top-2 w-3 h-3 rounded-full bg-brand-green -translate-x-1/2 shadow-[0_0_10px_rgba(20,160,113,0.7)] hidden md:block"
+                ></div>
+                <div
+                  class="p-6 md:p-8 bg-black/30 border border-white/10 hover:border-brand-green/30 rounded-3xl backdrop-blur-sm transition-all duration-300 group"
+                >
+                  <h3
+                    class="text-xl font-bold mb-1 group-hover:text-brand-green transition-colors"
+                  >
+                    Senior Frontend Developer
+                  </h3>
+                  <p class="text-brand-green text-sm mb-4 font-medium">
+                    TechCorp Inc. · Full-time
+                  </p>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Led engineering of complex 3D product visualizers using
+                    Three.js and React. Improved core web vitals by 40% through
+                    performance optimization and code-splitting strategies.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Job 2 -->
+              <div
+                class="relative md:grid md:grid-cols-2 md:gap-16 items-start"
+              >
+                <div class="md:text-right md:pr-16 mb-4 md:mb-0 md:order-1">
+                  <div
+                    class="p-6 md:p-8 bg-black/30 border border-white/10 hover:border-purple-500/30 rounded-3xl backdrop-blur-sm transition-all duration-300 group"
+                  >
+                    <h3
+                      class="text-xl font-bold mb-1 group-hover:text-purple-400 transition-colors"
+                    >
+                      Full-Stack Developer
+                    </h3>
+                    <p class="text-purple-400 text-sm mb-4 font-medium">
+                      StartupHub · Full-time
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                      Architected and shipped a full-featured SaaS product from
+                      zero to launch, serving 5,000+ users. Built with Next.js,
+                      Node.js, and PostgreSQL on AWS infrastructure.
+                    </p>
+                  </div>
+                </div>
+                <!-- Timeline dot -->
+                <div
+                  class="absolute left-0 md:left-1/2 top-2 w-3 h-3 rounded-full bg-purple-400 -translate-x-1/2 shadow-[0_0_10px_rgba(168,85,247,0.7)] hidden md:block"
+                ></div>
+                <div class="md:pl-16 md:order-2">
+                  <span
+                    class="text-xs font-bold text-purple-400 tracking-widest uppercase bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full"
+                    >2022 — 2024</span
+                  >
+                </div>
+              </div>
+
+              <!-- Job 3 -->
+              <div
+                class="relative md:grid md:grid-cols-2 md:gap-16 items-start"
+              >
+                <div class="md:text-right md:pr-16 mb-4 md:mb-0">
+                  <span
+                    class="text-xs font-bold text-yellow-400 tracking-widest uppercase bg-yellow-500/10 border border-yellow-500/20 px-3 py-1 rounded-full"
+                    >2021 — 2022</span
+                  >
+                </div>
+                <!-- Timeline dot -->
+                <div
+                  class="absolute left-0 md:left-1/2 top-2 w-3 h-3 rounded-full bg-yellow-400 -translate-x-1/2 shadow-[0_0_10px_rgba(250,204,21,0.7)] hidden md:block"
+                ></div>
+                <div
+                  class="p-6 md:p-8 bg-black/30 border border-white/10 hover:border-yellow-500/30 rounded-3xl backdrop-blur-sm transition-all duration-300 group"
+                >
+                  <h3
+                    class="text-xl font-bold mb-1 group-hover:text-yellow-400 transition-colors"
+                  >
+                    Junior Web Developer
+                  </h3>
+                  <p class="text-yellow-400 text-sm mb-4 font-medium">
+                    Creative Agency · Contract
+                  </p>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Developed responsive landing pages and interactive
+                    microsites for global brands. Introduced component-based
+                    architecture that reduced development time by 30%.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="min-h-[100vh] w-full flex items-center p-8 md:p-24 overflow-hidden"
+      >
+        <div class="max-w-7xl ml-auto w-full relative">
+          <h2
+            class="text-4xl md:text-6xl font-bold mb-16 text-right w-full text-white"
+          >
+            Featured <span class="text-brand-green">Projects</span>
+          </h2>
+
+          <div class="flex flex-col gap-12">
+            <!-- Project 1 -->
+            <div
+              class="group relative md:w-3/4 ml-auto overflow-hidden rounded-3xl bg-black/40 border border-white/10 hover:border-brand-green/30 transition-all duration-500 backdrop-blur-xl flex flex-col md:flex-row shadow-2xl"
+            >
+              <div
+                class="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-brand-green/20 to-black relative overflow-hidden flex items-center justify-center p-8"
+              >
+                <div
+                  class="absolute inset-0 bg-brand-green mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                ></div>
+                <div
+                  class="text-brand-green/40 font-black text-2xl tracking-widest break-words text-center uppercase"
+                >
+                  Project Alpha
+                </div>
+              </div>
+              <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <h3
+                  class="text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors"
+                >
+                  E-Commerce Web3
+                </h3>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                  A decentralized application with custom 3D renders for
+                  products, allowing users to interact directly with the models
+                  before purchasing.
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                  <span
+                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-300"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-300"
+                    >Three.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-300"
+                    >Tailwind</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+              class="group relative md:w-3/4 ml-auto overflow-hidden rounded-3xl bg-black/40 border border-white/10 hover:border-brand-green/30 transition-all duration-500 backdrop-blur-xl flex flex-col md:flex-row shadow-2xl"
+            >
+              <div
+                class="md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-purple-500/20 to-black relative overflow-hidden flex items-center justify-center p-8"
+              >
+                <div
+                  class="absolute inset-0 bg-purple-500 mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                ></div>
+                <div
+                  class="text-purple-500/40 font-black text-2xl tracking-widest break-words text-center uppercase"
+                >
+                  Data Viz Dash
+                </div>
+              </div>
+              <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <h3
+                  class="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors"
+                >
+                  Interactive Dashboard
+                </h3>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                  Live data visualization tool mapping complex datasets into an
+                  understandable and interactive web UI for corporate analysts.
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                  <span
+                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-300"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-300"
+                    >D3.js</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="min-h-[100vh] w-full flex items-center justify-center p-8 md:p-24 relative overflow-hidden"
+      >
+        <div class="max-w-3xl w-full relative z-10 text-center">
+          <div class="inline-block mb-4">
+            <div
+              class="w-16 h-1 bg-brand-green rounded-full mx-auto mb-4"
+            ></div>
+            <p
+              class="text-brand-green tracking-[0.3em] text-sm uppercase font-semibold"
+            >
+              What's Next?
+            </p>
+          </div>
+          <h2 class="text-5xl md:text-7xl font-bold mb-8">Get In Touch</h2>
+          <p
+            class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Currently open for new opportunities. Whether you have a question or
+            just want to say hi, my inbox is always open.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <a
+              href="mailto:hello@example.com"
+              class="px-10 py-5 bg-brand-green text-brand-dark text-lg font-bold rounded-xl hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(20,160,113,0.3)] w-full sm:w-auto"
+              >Say Hello</a
+            >
+            <a
+              href="#"
+              class="px-10 py-5 bg-black/40 border border-white/20 text-white text-lg font-bold rounded-xl hover:bg-white/10 transition-all backdrop-blur-md w-full sm:w-auto"
+              >My Resume</a
+            >
+          </div>
+
+          <footer class="mt-32 text-sm text-gray-600 font-medium">
+            <p>
+              &copy; 2026 Developer Portfolio. Built with Vite, Tailwind CSS,
+              and Three.js.
+            </p>
+          </footer>
+        </div>
+      </section>
+    </div>
+
+    <!-- Generate Image Placeholders properly to Wow user -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

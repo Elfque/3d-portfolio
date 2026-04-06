@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Nav -->
+    <nav>
+      <div class="logo">DEV<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">// about</a></li>
+        <li><a href="#projects">// projects</a></li>
+        <li><a href="#contact">// contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-tag">// full-stack web developer</div>
+        <h1>
+          Building things<br />
+          <span class="line2">for the web.</span>
+        </h1>
+        <p class="hero-sub">
+          I craft fast, accessible, and beautifully engineered<br />
+          digital experiences — from pixel to production.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-line"></span>
+        scroll to explore
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-wrap">
+        <div class="section-header reveal">
+          <span class="section-num">01</span>
+          <h2 class="section-title">About me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Hey — I'm a <strong>full-stack developer</strong> who loves
+              building products that sit at the intersection of engineering and
+              great design.
+            </p>
+            <p>
+              I work across the entire stack, from architecting
+              <strong>scalable APIs</strong> to crafting
+              <strong>pixel-perfect UIs</strong>. I care deeply about
+              performance, accessibility, and developer experience.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring open-source projects, writing
+              about web technologies, or tinkering with creative coding and
+              <strong>3D on the web</strong>.
+            </p>
+          </div>
+          <div class="skills-grid reveal">
+            <div class="skill-item">React / Next.js</div>
+            <div class="skill-item">TypeScript</div>
+            <div class="skill-item">Node.js</div>
+            <div class="skill-item">PostgreSQL</div>
+            <div class="skill-item">Three.js / WebGL</div>
+            <div class="skill-item">Tailwind CSS</div>
+            <div class="skill-item">Docker / CI/CD</div>
+            <div class="skill-item">REST & GraphQL</div>
+            <div class="skill-item">AWS / Vercel</div>
+            <div class="skill-item">Git / GitHub</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-wrap">
+        <div class="section-header reveal">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Selected work</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 01 — SaaS</div>
+            <h3 class="project-title">Lumina Dashboard</h3>
+            <p class="project-desc">
+              A real-time analytics platform with live data streams,
+              customizable widgets, and role-based access control for enterprise
+              teams.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Next.js</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Prisma</span>
+              <span class="stack-tag">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 02 — Open Source</div>
+            <h3 class="project-title">Gridkit UI</h3>
+            <p class="project-desc">
+              A headless component library built with accessibility-first
+              principles. Zero runtime styles, fully tree-shakeable, 20k+ weekly
+              downloads.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Radix UI</span>
+              <span class="stack-tag">Storybook</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 03 — Creative</div>
+            <h3 class="project-title">Morphic Studio</h3>
+            <p class="project-desc">
+              An interactive 3D art generator in the browser using Three.js and
+              WebGL shaders. Export to PNG or animated GIF.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Three.js</span>
+              <span class="stack-tag">GLSL</span>
+              <span class="stack-tag">Vite</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 04 — Mobile</div>
+            <h3 class="project-title">Bloom Finance</h3>
+            <p class="project-desc">
+              A personal finance app with smart categorization, budget tracking,
+              and AI-powered spending insights via React Native.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">React Native</span>
+              <span class="stack-tag">Expo</span>
+              <span class="stack-tag">Supabase</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 05 — API</div>
+            <h3 class="project-title">Webhooks.dev</h3>
+            <p class="project-desc">
+              A webhook testing and debugging tool with request inspection,
+              replay, and team sharing. Used by 5k+ developers monthly.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">WebSockets</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <a class="project-link" href="#">↗</a>
+            <div class="project-tag">// 06 — DevTools</div>
+            <h3 class="project-title">Deploymate</h3>
+            <p class="project-desc">
+              A CLI tool and GitHub Action for zero-downtime deployments with
+              automatic rollback, health checks, and Slack notifications.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Go</span>
+              <span class="stack-tag">Docker</span>
+              <span class="stack-tag">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-wrap">
+        <div class="contact-inner reveal">
+          <div
+            class="section-header"
+            style="justify-content: center; margin-bottom: 2rem"
+          >
+            <span class="section-num">03</span>
+            <h2 class="section-title">Let's talk</h2>
+          </div>
+          <p class="contact-sub">
+            Have a project in mind, a role to fill, or just want<br />
+            to say hello? My inbox is always open.
+          </p>
+          <a class="contact-email" href="mailto:hello@yourname.dev"
+            >hello@yourname.dev</a
+          >
+          <div class="socials">
+            <a class="social-link" href="#">// github</a>
+            <a class="social-link" href="#">// linkedin</a>
+            <a class="social-link" href="#">// twitter</a>
+            <a class="social-link" href="#">// resume ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Designed &amp; built by you — &copy; 2026</span>
+    </footer>
+
+    <!-- Three.js via CDN -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Full Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cur"></div>
+    <div id="cur-ring"></div>
+
+    <nav>
+      <div class="logo">DEV<em>.</em></div>
+      <ul>
+        <li><a href="#about">// about</a></li>
+        <li><a href="#projects">// projects</a></li>
+        <li><a href="#contact">// contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ══ HERO ══════════════════════════════════════════ -->
+    <section id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-tag">// full-stack web developer</div>
+        <h1>Crafting digital<br /><span class="hi">experiences.</span></h1>
+        <p class="hero-sub">
+          I build fast, accessible and beautifully<br />engineered products —
+          from pixel to production.
+        </p>
+        <div class="ctas">
+          <a href="#projects" class="btn btn-p">View my work</a>
+          <a href="#contact" class="btn btn-g">Get in touch</a>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span>scroll to explore</div>
+    </section>
+
+    <!-- ══ ABOUT ══════════════════════════════════════════ -->
+    <section id="about">
+      <canvas id="about-canvas"></canvas>
+      <div class="sw about-wrap">
+        <div class="sh reveal">
+          <span class="sn">01</span>
+          <h2 class="st">About me</h2>
+          <div class="sl"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Hey — I'm a <strong>full-stack developer</strong> who loves
+              building products at the intersection of engineering and great
+              design.
+            </p>
+            <p>
+              I work across the entire stack, from architecting
+              <strong>scalable APIs</strong> to crafting
+              <strong>pixel-perfect UIs</strong>. I care deeply about
+              performance, accessibility, and developer experience.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring open-source, writing about web
+              tech, or tinkering with <strong>3D on the web</strong>.
+            </p>
+            <p class="skills-hint" style="margin-top: 1.5rem">
+              👆 <em>Hover the orbs</em> to explore my skills
+            </p>
+          </div>
+          <div class="reveal" id="skills-canvas-wrap">
+            <canvas id="skills-canvas"></canvas>
+            <div class="skill-tooltip" id="skill-tip"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ══════════════════════════════════════════ -->
+    <section id="projects">
+      <div class="sw">
+        <div class="sh reveal">
+          <span class="sn">02</span>
+          <h2 class="st">Selected work</h2>
+          <div class="sl"></div>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="torus-knot"
+                data-color="#2b7fff"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 01 — SaaS</div>
+              <h3 class="card-title">Lumina Dashboard</h3>
+              <p class="card-desc">
+                Real-time analytics with live streams, custom widgets, and
+                role-based access for enterprise teams.
+              </p>
+              <div class="stack">
+                <span class="tag">Next.js</span
+                ><span class="tag">TypeScript</span
+                ><span class="tag">Prisma</span
+                ><span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="icosahedron"
+                data-color="#a78bfa"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 02 — Open Source</div>
+              <h3 class="card-title">Gridkit UI</h3>
+              <p class="card-desc">
+                Headless, accessibility-first component library. Zero runtime
+                styles, fully tree-shakeable, 20k+ weekly downloads.
+              </p>
+              <div class="stack">
+                <span class="tag">React</span><span class="tag">Radix UI</span
+                ><span class="tag">Storybook</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="octahedron"
+                data-color="#34d399"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 03 — Creative</div>
+              <h3 class="card-title">Morphic Studio</h3>
+              <p class="card-desc">
+                Browser-based 3D art generator using Three.js and WebGL shaders.
+                Export to PNG or animated GIF.
+              </p>
+              <div class="stack">
+                <span class="tag">Three.js</span><span class="tag">GLSL</span
+                ><span class="tag">Vite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="torus"
+                data-color="#ffb347"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 04 — Mobile</div>
+              <h3 class="card-title">Bloom Finance</h3>
+              <p class="card-desc">
+                Personal finance app with AI-powered spending insights, smart
+                categorization and budget tracking.
+              </p>
+              <div class="stack">
+                <span class="tag">React Native</span
+                ><span class="tag">Expo</span><span class="tag">Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="dodecahedron"
+                data-color="#00e5ff"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 05 — API</div>
+              <h3 class="card-title">Webhooks.dev</h3>
+              <p class="card-desc">
+                Webhook testing and debugging tool with request inspection,
+                replay, and team sharing. 5k+ devs monthly.
+              </p>
+              <div class="stack">
+                <span class="tag">Node.js</span><span class="tag">Redis</span
+                ><span class="tag">WebSockets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <a class="card-link" href="#">↗</a>
+            <div class="card-top">
+              <canvas
+                class="card-canvas"
+                data-shape="cone"
+                data-color="#f472b6"
+              ></canvas>
+            </div>
+            <div class="card-body">
+              <div class="card-num">// 06 — DevTools</div>
+              <h3 class="card-title">Deploymate</h3>
+              <p class="card-desc">
+                CLI + GitHub Action for zero-downtime deployments with rollback,
+                health checks, and Slack alerts.
+              </p>
+              <div class="stack">
+                <span class="tag">Go</span><span class="tag">Docker</span
+                ><span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ══════════════════════════════════════════ -->
+    <section id="contact">
+      <canvas id="contact-canvas"></canvas>
+      <div class="sw">
+        <div class="contact-inner reveal">
+          <h2 class="st">Let's talk</h2>
+          <p class="contact-sub">
+            Have a project in mind, a role to fill, or just want to<br />say
+            hello? My inbox is always open.
+          </p>
+          <a class="contact-email" href="mailto:hello@yourname.dev"
+            >hello@yourname.dev</a
+          >
+          <div class="socials">
+            <a class="soc" href="#">// github</a>
+            <a class="soc" href="#">// linkedin</a>
+            <a class="soc" href="#">// twitter</a>
+            <a class="soc" href="#">// resume ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Designed &amp; built by you — &copy; 2026</footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
